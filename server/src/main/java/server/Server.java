@@ -14,13 +14,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import contract.MyBuffer;
 import contract.Request;
-import contract.Response;
 import contract.UserResponse;
 import contract.UserTransfer;
-import database.DBFunctions;
 import database.EntryRoom;
 import database.UserInfo;
-import manager.CommandManager;
 import threads.CommandProxy;
 import threads.CommandTask;
 import useful_staff.ProgramStarter;
@@ -28,7 +25,6 @@ import useful_staff.ProgramStarter;
 public class Server {
 
     public static boolean script = false;
-	public static CommandProxy cp = new CommandProxy();
 	
     public static void main(String[] args) throws IOException {
     	
@@ -87,23 +83,29 @@ public class Server {
                             ObjectInputStream ois = new ObjectInputStream(bis);
                         	Request request = (Request) ois.readObject();
                             UserInfo uf = new UserInfo(conn, request.getUID());
+                            logs.writeInfo("User "+uf.getUID()+" requested "+request.getCom());
                             CommandTask ct = new CommandTask(socketChannel, uf, usersNum, request);
+                            logs.writeInfo("User "+uf.getUID()+" created command task ");
+                            CommandProxy cp = context.getBean(CommandProxy.class);
                             cp.CommandToPool(ct);
+                            logs.writeInfo("User "+uf.getUID()+" forked in pool ");
                         }
                         
                       //Регистрация пользователя                      
                         
                         catch (Exception e) {
+                        	logs.writeError(e.toString());
                         	ByteArrayInputStream bis = new ByteArrayInputStream(myBuffer.toByteBuffer().array());
                             ObjectInputStream ois = new ObjectInputStream(bis);
                         	UserTransfer ut;
 							try {
 								ut = (UserTransfer) ois.readObject();
-								 String username = ut.getUsername();
+								String username = ut.getUsername();
 	                            String password = ut.getPassword();
 	                            boolean signing = ut.getSigning();
-	                            EntryRoom er = new EntryRoom();
+	                            EntryRoom er = context.getBean(EntryRoom.class);
 	                            UserResponse usresp = er.registry(username, password, signing, conn);
+	                            logs.writeInfo("User registried "+usresp.getSuccess());
 	                            
 	                            ByteArrayOutputStream bos = new ByteArrayOutputStream();
 	                            ObjectOutputStream oos = new ObjectOutputStream(bos);

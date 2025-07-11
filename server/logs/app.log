@@ -1,2 +1,50 @@
 2025-07-09 17:09:53 [main] INFO  server.Server - DataBase connected
 2025-07-09 17:09:53 [main] INFO  server.Server - Server started. PORT: 5452
+2025-07-10 12:36:24 [main] INFO  server.Server - DataBase connected
+2025-07-10 12:36:24 [main] INFO  server.Server - Server started. PORT: 5452
+2025-07-10 13:55:10 [main] INFO  server.Server - DataBase connected
+2025-07-10 13:55:10 [main] INFO  server.Server - Server started. PORT: 5452
+2025-07-10 13:55:29 [main] INFO  server.Server - Connected users: 1
+2025-07-10 13:55:39 [main] INFO  server.Server - User registried true
+2025-07-10 13:56:35 [main] INFO  server.Server - User 0 requested help
+2025-07-10 14:07:11 [main] INFO  server.Server - DataBase connected
+2025-07-10 14:07:11 [main] INFO  server.Server - Server started. PORT: 5452
+2025-07-10 14:07:21 [main] INFO  server.Server - Connected users: 1
+2025-07-10 14:07:31 [main] INFO  server.Server - User registried true
+2025-07-10 14:07:36 [main] INFO  server.Server - User 0 requested help
+2025-07-10 14:07:36 [main] INFO  server.Server - User 0 created command task 
+2025-07-10 14:11:37 [main] INFO  server.Server - DataBase connected
+2025-07-10 14:11:37 [main] INFO  server.Server - Server started. PORT: 5452
+2025-07-10 14:11:43 [main] INFO  server.Server - Connected users: 1
+2025-07-10 14:11:56 [main] INFO  server.Server - User registried true
+2025-07-10 14:11:59 [main] INFO  server.Server - User 0 requested help
+2025-07-10 14:11:59 [main] INFO  server.Server - User 0 created command task 
+2025-07-10 14:15:29 [main] INFO  server.Server - DataBase connected
+2025-07-10 14:15:29 [main] INFO  server.Server - Server started. PORT: 5452
+2025-07-10 14:15:36 [main] INFO  server.Server - Connected users: 1
+2025-07-10 14:15:45 [main] ERROR server.Server - java.lang.ClassCastException: class contract.UserTransfer cannot be cast to class contract.Request (contract.UserTransfer and contract.Request are in unnamed module of loader 'app')
+2025-07-10 14:15:45 [main] INFO  server.Server - User registried true
+2025-07-10 14:15:48 [main] INFO  server.Server - User 0 requested help
+2025-07-10 14:15:48 [main] INFO  server.Server - User 0 created command task 
+2025-07-10 14:15:48 [main] ERROR server.Server - org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'threads.CommandProxy' available
+2025-07-10 14:17:05 [main] INFO  server.Server - DataBase connected
+2025-07-10 14:17:05 [main] INFO  server.Server - Server started. PORT: 5452
+2025-07-10 14:17:09 [main] INFO  server.Server - Connected users: 1
+2025-07-10 14:17:20 [main] ERROR server.Server - java.lang.ClassCastException: class contract.UserTransfer cannot be cast to class contract.Request (contract.UserTransfer and contract.Request are in unnamed module of loader 'app')
+2025-07-10 14:17:20 [main] INFO  server.Server - User registried true
+2025-07-10 14:17:22 [main] INFO  server.Server - User 0 requested help
+2025-07-10 14:17:22 [main] INFO  server.Server - User 0 created command task 
+2025-07-10 14:17:22 [main] INFO  server.Server - User 0 forked in pool 
+2025-07-10 14:17:42 [main] INFO  server.Server - User 0 requested help
+2025-07-10 14:17:42 [main] INFO  server.Server - User 0 created command task 
+2025-07-10 14:17:42 [main] INFO  server.Server - User 0 forked in pool 
+2025-07-10 14:18:58 [main] INFO  server.Server - DataBase connected
+2025-07-10 14:19:08 [main] ERROR server.Server - User disconnected: java.net.SocketException: Connection reset
+2025-07-10 14:19:30 [main] INFO  server.Server - DataBase connected
+2025-07-10 14:19:30 [main] INFO  server.Server - Server started. PORT: 5452
+2025-07-10 14:19:37 [main] INFO  server.Server - Connected users: 1
+2025-07-10 14:19:44 [main] ERROR server.Server - java.lang.ClassCastException: class contract.UserTransfer cannot be cast to class contract.Request (contract.UserTransfer and contract.Request are in unnamed module of loader 'app')
+2025-07-10 14:19:44 [main] INFO  server.Server - User registried true
+2025-07-10 14:19:47 [main] INFO  server.Server - User 0 requested help
+2025-07-10 14:19:47 [main] INFO  server.Server - User 0 created command task 
+2025-07-10 14:19:47 [main] INFO  server.Server - User 0 forked in pool 

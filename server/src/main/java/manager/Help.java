@@ -20,11 +20,6 @@ public class Help extends Command{
 	
 	@Override
 	public void run() {
-		try {
-			Thread.sleep(20000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
 		}
 	
 	public String getString() {

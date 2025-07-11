@@ -3,18 +3,18 @@ package database;
 import java.sql.Connection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import contract.UserResponse;
-import server.Server;
 
+@Component
 public class EntryRoom {
-	
-	private boolean success_registry = true;
 	
 	@Autowired
 	private DBFunctions dbFunc;
 	
 	public UserResponse registry(String username, String password, boolean signing, Connection conn) {
+		boolean success_registry = true;
 		if (signing) {
 			UsersRow startsearching = dbFunc.search_by_username(conn, username);
 			if (startsearching != null) {

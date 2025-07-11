@@ -16,7 +16,6 @@ import contract.Response;
 import database.UserInfo;
 import manager.CommandManager;
 import server.LoggerConfiguration;
-import server.Server;
 
 public class CommandTask extends RecursiveTask<String>{
 	
@@ -24,7 +23,7 @@ public class CommandTask extends RecursiveTask<String>{
 	private int usersNum;
 	private SocketChannel socketChannel;
 	private Request request;
-	private final LoggerConfiguration logs = new LoggerConfiguration(Server.class);
+	private final LoggerConfiguration logs = new LoggerConfiguration(CommandTask.class);
 	
 	public CommandTask(SocketChannel socketChannel, UserInfo uf, int usersNum, Request request) {
 		this.uf = uf;
